@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    background-color: rgb(36, 36, 36);
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+h1 {
+    color: white;
+    font-size: 6rem;
+}
+h2 {
+    color: white;
+    font-size: 4rem;
+}
+
+
+p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+body {
+    margin: auto;
+}
+header {
+
+    width: 100%;
+}
+
+nav {
+    color: white;
+    background-color: rgba(36, 36, 36, 0.3);
+    position: fixed;
+    z-index: 10;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+nav .list {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .list a {
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav .list a:hover {
+    color: rgb(157, 157, 157);
+}
+
+#toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icons-bars {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icons-bars .line{
+    width: 3rem;
+    height: 0.5rem;
+    background-color: white;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    transition: all .3s ease-in-out;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.myslider {
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 5rem;
+    padding: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+    background: transparent;
+}
+
+.prev:hover, .next:hover{
+    color: rgb(157, 157, 157);
+}
+
+.next{
+    right: 0;
+}
+
+.dotsbox{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 2rem;
+    cursor: pointer;
+}
+
+.dot {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.3rem solid #fff;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.active, .dot:hover{
+    border-color: rgb(157, 157, 157);
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from{opacity: 0.8;}
+    to{opacity: 1;}
+}
+
+@keyframes fade {
+    from{opacity: 0.8;}
+    to{opacity: 1;}
+}
+
+.txt{
+    position: absolute;
+    color: #fff;
+    top: 40rem;
+    left: 15%;
+    width: 90rem;
+    -webkit-animation-name: posi;
+    -webkit-animation-duration: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+@-webkit-keyframes posi {
+    from {left: 25%;}
+    to {left: 15%;}
+} 
+
+@keyframes posi {
+    from {left: 25%;}
+    to {left: 15%;}
+} 
+
+.myslider img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    transform: scale(1.3, 1.3);
+    -webkit-animation-name: zoomin;
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin {
+    from {transform: scale(1,1);}
+    to {transform: scale(1.3, 1.3);}
+}
+
+@keyframes zoomin {
+    from {transform: scale(1,1);}
+    to {transform: scale(1.3, 1.3);}
+}
+
+.seccion-aboutus {
+    scroll-margin-top: 30rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: #fff;
+}
+
+.titular-aboutus {
+    padding: 8rem 5rem 15rem 5rem;
+    margin: 0 auto;
+    width: 90rem;
+    text-align: center;
+}
+
+.titular-aboutus div {
+    margin: 0 auto;
+    background-color: rgba(36, 36, 36);
+    height: 0.3rem;
+    width: 30rem;
+    margin-bottom: 2rem;
+}
+
+.titular-aboutus h2 {
+    margin-bottom: 1rem;
+    color: rgba(36, 36, 36);
+}
+
+.titular-aboutus p {
+    color: rgba(36, 36, 36);
+}
+
+.seccion-services {
+    scroll-margin-top: 15rem;
+    background-image: url(../img/matthew-henry-yETqkLnhsUI-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8rem 5rem 3rem 5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.titular-services {
+    position: relative;
+    bottom: 18rem;
+    padding: 8rem;
+    background-color:rgba(36, 36, 36);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.titular-services__img {
+    background-image: url(img/sean-pollock-PhYq704ffdA-unsplash.jpg);
+    background-size: cover;
+    background-position: relative;
+    background-repeat: no-repeat;
+    height: 70rem;
+    width: 50%;
+}
+
+.titular-services__txt {
+    padding: 5rem;
+}
+
+.titular-services__txt div {
+    margin: 0 auto;
+    background-color: #fff;
+    height: 0.3rem;
+    width: 40rem;
+    margin-bottom: 2rem;
+}
+
+.titular-services img {
+    width: 100rem;
+}
+
+.titular-services h2 {
+    text-align: left;
+}
+
+.titular-services ul {
+    margin-top: 3rem;
+    text-align: left;
+}
+
+
+.titular-services ul li {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.seccion-mision {
+        scroll-margin-top: 15rem;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        background-color: #fff;
+}
+
+
+
+.titular-mision {
+    padding: 8rem 5rem 15rem 5rem;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.titular-mision .line {
+    margin: 0 auto;
+    background-color: rgba(36, 36, 36);
+    height: 0.3rem;
+    width: 30rem;
+    margin-bottom: 2rem;
+}
+
+.titular-mision h2 {
+    margin-bottom: 1rem;
+    color: rgba(36, 36, 36);
+}
+
+.titular-mision p {
+    margin: 0 auto;
+    width: 90rem;
+    color: rgba(36, 36, 36);
+}
+
+.circulos {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circulo {
+    border-color: rgba(36, 36, 36);
+    border-width: 0.1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: rgba(36, 36, 36);
+}
+
+.circulo h3 {
+    color: #fff;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    width: 20rem;
+}
+
+.seccion-contact {
+    scroll-margin-top: 10rem;
+    background-image: url(../img/andrew-kliatskyi-P46Fz8onsbs-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8rem 5rem 3rem 5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.container-contact {
+    position: relative;
+    bottom: 18rem;
+    padding: 8rem;
+    background-color:rgba(36, 36, 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.container-contact h2 {
+    text-align: left;
+}
+
+.container-contact .line {
+    margin: 0 auto;
+    background-color: #fff;
+    height: 0.3rem;
+    width: 30rem;
+    margin-bottom: 2rem;
+}
+
+
+.container-contact__txt {
+    margin-top: 5rem;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-adress {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.contact-adress h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.contact-adress ol li {
+    margin-top: 1rem;
+}
+
+.contact-phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.contact-phone h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.contact-phone ol li {
+    margin-top: 1rem;
+}
+
+
+@media (max-width:768px) {
+    nav .logo {
+        float: none;
+        margin: auto;
+        justify-content: center;
+    }
+    nav .list {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 10rem;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .list a {
+        font-size: 2rem;
+    }
+    nav :checked ~ .list {
+        bottom: 0;
+    }
+
+    nav .icons-bars {
+        display: block;
+    }
+}
