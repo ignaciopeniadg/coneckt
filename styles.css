@@ -185,7 +185,7 @@ nav .icons-bars .line{
     position: absolute;
     color: #fff;
     top: 40rem;
-    left: 15%;
+    margin-left: 30rem;
     width: 90rem;
     -webkit-animation-name: posi;
     -webkit-animation-duration: 2s;
@@ -195,13 +195,13 @@ nav .icons-bars .line{
 }
 
 @-webkit-keyframes posi {
-    from {left: 25%;}
-    to {left: 15%;}
+    from {margin-left: 50rem;}
+    to {margin-left: 30rem;}
 } 
 
 @keyframes posi {
-    from {left: 25%;}
-    to {left: 15%;}
+    from {margin-left: 50rem;}
+    to {margin-left: 30rem;}
 } 
 
 .myslider img {
@@ -464,7 +464,15 @@ nav .icons-bars .line{
 }
 
 
-@media (max-width:768px) {
+@media (max-width:840px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+
     nav .logo {
         float: none;
         margin: auto;
@@ -496,4 +504,113 @@ nav .icons-bars .line{
     nav .icons-bars {
         display: block;
     }
+
+    .txt{
+        text-align: center;
+        top: 40rem;
+        margin:0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        -webkit-animation-name: posi;
+        -webkit-animation-duration: 2s;
+        animation-name: posi;
+        animation-duration: 2s;
+        z-index: 1;
+    }
+    
+    @-webkit-keyframes posi {
+        from {margin-left: 50rem;}
+        to {margin-left: 30rem;}
+    } 
+    
+    @keyframes posi {
+        from {margin-left: 50rem;}
+        to {margin-left: 30rem;}
+    } 
+    .txt h1 {
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+    .titular-services__img {
+        display: none;
+    }
+
+    .seccion-services {
+        padding: 8rem 4rem 2rem 4rem;
+    }
+
+    
+    .titular-services {
+        padding: 3rem;
+        width: 100%;
+    }
+    .titular-services__img {
+        display: none;
+    }
+
+
+    .titular-services__txt div {
+        height: 0.3rem;
+        width: 100%;
+    }
+
+    .titular-services img {
+        display: none;
+    }
+
+    .titular-services h2 {
+        text-align: center;
+    }
+
+    .titular-services ul {
+        text-align: center;
+    }
+
+    .seccion-mision {
+        scroll-margin-top: 15rem;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        background-color: #fff;
+    }
+
+    .titular-mision {
+        padding: 8rem 0rem 15rem 0rem;
+        width: 100%;
+    }
+
+    .titular-mision p {
+        width: 80%;
+    }
+
+    .circulos {
+        margin-top: 3rem;
+        margin-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .circulo {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width:576px) {
+    .txt{
+        top: 30rem;
+        width: 30rem;
+    }
+
+        
+    .seccion-services {
+        padding: 8rem 2rem 2rem 2rem;
+    }
+
+    .titular-mision p {
+        width: 85%;
+    }
+
 }
